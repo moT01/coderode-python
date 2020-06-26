@@ -6,7 +6,10 @@ config:
       tap: ''
     setup:
       commands:
-        - pip3 install -r requirements.txt
+        - echo 'export PYTHONPATH=~/project' >> ~/.bashrc
+        - echo 'export PYTHONUSERBASE=~/project' >> ~/.bashrc
+        - source ~/.bashrc
+        - pip3 install --user -r requirements.txt
   repo: 
     uri: https://github.com/moT01/coderode-python
     branch: v0.1.0
